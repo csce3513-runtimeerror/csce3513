@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById("Save").addEventListener("click", saveEmployee);
+    document.getElementById("save").addEventListener("click", saveEmployee);
 });
 function saveEmployee() {
     if (!validateInput()) {
@@ -14,7 +14,7 @@ function saveEmployee() {
     ajaxPost("/employeeDetail", requestPayload, (callbackResponse) => {
 
     });
-    //window.location.replace(url); Redirect
+    //window.location.replace(url); Redirect to URL
 }
 function validateInput() {
     if (document.getElementById("firstName").value == "") {
