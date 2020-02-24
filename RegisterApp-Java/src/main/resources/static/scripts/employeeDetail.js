@@ -9,15 +9,14 @@ function saveEmployee() {
     }
     document.getElementById("employeeSavedAlertModal").style.display="block";
     const requestPayload = {
-        firstName = document.getElementById("firstName").value,
-        lastName = document.getElementById("lastName").value,
-        password = document.getElementById("password").value,
-        empType = document.getElementById("empType").value
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        password: document.getElementById("password").value,
+        empType: document.getElementById("empType").value
     };
     ajaxPost("/employeeDetail", requestPayload, (callbackResponse) => {
-
     });
-    //window.location.replace(url); Redirect to URL
+    //window.location.replace(); Redirect to URL
 }
 function validateInput() {
     if (document.getElementById("firstName").value == "") {

@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import edu.uark.registerapp.commands.products.ProductsQuery;
 import edu.uark.registerapp.controllers.enums.ViewModelNames;
 import edu.uark.registerapp.controllers.enums.ViewNames;
+import edu.uark.registerapp.models.api.Employee;
 import edu.uark.registerapp.models.api.Product;
 
 @Controller
@@ -32,6 +33,13 @@ public class ProductListingRouteController {
 				(new Product[0]));
 		}
 		
+		return modelAndView;
+	}
+	@RequestMapping(value = "/employeeDetail", method = RequestMethod.GET)
+	public ModelAndView showEmployeeDetail() {
+		ModelAndView modelAndView =
+			new ModelAndView("employeeDetail");
+		modelAndView.addObject("employee", (new Employee()));
 		return modelAndView;
 	}
 
