@@ -27,7 +27,7 @@
 					<tr class="hidden">
 						<td>ID:</td>
 						<td>
-							<input id="employeeID" type="hidden" th:value="${!employee.isEmpty} ? ${employee.id} : ''" />
+							<input id="employeeId" type="hidden" th:value="${!employee.isEmpty} ? ${employee.id} : ''" />
 						</td>
 					</tr>
 					<tr class="hidden">
@@ -88,7 +88,7 @@
 
 		<!-- TODO: An action element to initiate a save -->
 
-		<div id="employeeSavedAlertModal" class="modal animate-opacity-show">
+		<div id="employeeSavedAlertModal" class="modal animate-opacity-show" style="display:none">
 			<div class="modal-content">
 				<div class="container gray-blue">
 					<h1>
@@ -102,7 +102,8 @@
 
 	<div class="footer" th:classappend="${employee.isInitialEmployee} ? hidden : ''">
 		<img id="signOutImage" src="Pictures/baseline_input_black_18dp.png" alt="Sign Out" class="footer" />
-	</div>
+    </div>
+    <p id="errorMessage" hidden></p>
 
 </body>
 
