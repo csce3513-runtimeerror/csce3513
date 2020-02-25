@@ -16,7 +16,6 @@ function saveEmployee() {
     };
     ajaxPost("/employeeDetail", requestPayload, (callbackResponse) => {
     });
-    //window.location.replace(); Redirect to URL
 }
 function validateInput() {
     if (document.getElementById("firstName").value == "") {
@@ -43,5 +42,5 @@ function validateInput() {
      }
 }
 function signOut() {
-    window.location.replace("/signOut");
+    window.location.replace("/signIn");
 }
